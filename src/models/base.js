@@ -4,7 +4,7 @@ const async = require('async');
 const crypto = require('crypto');
 const throttledQueue = require('throttled-queue');
 
-const throttle = throttledQueue(10, 10000, true);
+const throttle = throttledQueue(10, 1000, true);
 
 /**
  * base model
