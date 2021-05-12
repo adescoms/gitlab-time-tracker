@@ -48,6 +48,10 @@ class report extends Base {
             params.push(`milestone=${this.config.get('milestone')}`);
         }
 
+        if (this.config.get('from')) {
+            params.push(`updated_after=${this.config.get('from')}`)
+        }
+
         return `?${params.join('&')}`;
     }
 
